@@ -13,7 +13,7 @@
 "editor.wordWrap": "on",
 "workbench.tree.indent": 2,
 "editor.letterSpacing": 1,
-"editor.fontFamily": "'Fira Code',Source Code Pro,",
+"editor.fontFamily": "'Fira Code', 'Source Code Pro','Microsoft JhengHei'",
 "editor.fontSize": 16,
 "editor.formatOnPaste": true,
 "editor.multiCursorModifier": "ctrlCmd",
@@ -38,18 +38,34 @@
 "prettier.printWidth": 80,
 "prettier.trailingComma": "es5",
 "prettier.tabWidth": 2,
+"window.titleBarStyle": "custom",
 "cSpell.userWords": [
-//新增的單字
 "Jamse",
 "Lebron",
+"MVVM",
 "Miaoli",
+"OWASP",
+"Repos",
 "Tseng",
 "draggable",
-"draggables"
+"draggables",
+"swiper",
+"tailwindcss",
+"typicode"
 ],
-// "editor.codeActionsOnSave": {
-// "source.fixAll": true
-// },
+"editor.codeActionsOnSave": {
+"source.fixAll": true
+},
 "eslint.validate": ["javascript", "vue"], // eslint 支援 vue
-"vetur.validation.template": false // 關閉 vetur 驗證
+"vetur.validation.template": false, // 關閉 vetur 驗證
+
+"eslint.options": {
+"rules": {
+"indent": ["error", 2],
+"linebreak-style": ["nerver", "unix"],
+"semi": ["error", "never"],
+"quotes": ["error", "single"],
+"no-console": ["warn"]
+}
+}
 }
