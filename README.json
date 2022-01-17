@@ -1,4 +1,26 @@
-
+// 橋宏設定
+{
+  "workbench.colorTheme": "Default Dark+",
+  // 自定義
+  "editor.formatOnSave": true,
+  "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+          "wrap_attributes": "auto"
+      },
+      "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+      }
+  },
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "liveServer.settings.port": 2364,
+  "liveServer.setting.donotShowInfoMsg": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "beautify.config": "",
+}
+//=================================================================
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript,html,css]": {
