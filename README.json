@@ -45,6 +45,121 @@
   }
 },
 //==============================================================
+
+{
+  // ============== 自動格式化開關 =========================
+  "editor.formatOnSave": true,
+
+  // ============== eslint 開關 ============================
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": true
+  // },
+
+  // ============== prettier 設定 =============================
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+
+  "beautify.language": {
+    "js": {
+      "type": ["javascript", "json"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+    },
+    "css": ["css", "scss"],
+    "html": ["htm", "html"]
+  },
+
+  //================= vetur 設定 =============================
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      // - auto: 僅在超出行長度時才對屬性進行換行。
+      // - force: 對除第一個屬性外的其他每個屬性進行換行。
+      // - force-aligned: 對除第一個屬性外的其他每個屬性進行換行，並保持對齊。
+      // - force-expand-multiline: 對每個屬性進行換行。
+      // - aligned-multiple: 當超出折行長度時，將屬性進行垂直對齊。
+      "wrap_attributes": true
+    },
+    "prettyhtml": {
+      "printWidth": 120,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    },
+    "prettier": {
+      "semi": true, //使用分號結尾
+      "singleQuote": true, //使用單引號
+      "eslintIntegration": false //開啟 eslint 支援
+    }
+  },
+  // ===========================================================
+
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on", // vscode 文字超過視窗斷行
+  "editor.letterSpacing": 1,
+  "editor.fontFamily": "'Fira Code', 'Source Code Pro','Microsoft JhengHei'",
+  "editor.fontSize": 16,
+  "sync.forceUpload": true,
+
+  // ===================== git 同步 ==========================
+  "sync.gist": "92a9c995ecf28d5a3d21c6f2a8307eca",
+
+  // ===================== 終端機樣式設定 ====================
+  "workbench.colorCustomizations": {
+    //可以將鼠標放到下面的色號上根據自己的偏好進行選擇
+    "terminal.foreground": "#fff",
+    "terminal.background": "#2b2424"
+  },
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.fontSize": 14,
+
+  "workbench.tree.indent": 2,
+  // "cSpell.enableFiletypes": ["javascript", "css", "vue"],
+  "liveServer.settings.port": 2364,
+  "liveServer.setting.donotShowInfoMsg": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // vscode 新增單字
+  "cSpell.userWords": [
+    "Jamse",
+    "Lebron",
+    "MVVM",
+    "Miaoli",
+    "Nuxt",
+    "OWASP",
+    "Repos",
+    "Tseng",
+    "USERAPI",
+    "axios",
+    "childs",
+    "concat",
+    "draggable",
+    "draggables",
+    "keydown",
+    "keyup",
+    "orgs",
+    "semibold",
+    "swal",
+    "swiper",
+    "tailwindcss",
+    "tbody",
+    "thead",
+    "typeof",
+    "typicode",
+    "vuetify"
+  ],
+  "window.title": "${folderName}${separator}",
+  "bracketPairColorizer.depreciation-notice": false,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  }
+}
+
+
 {
   "files.autoSave": "off",
   "liveServer.settings.donotShowInfoMsg": true,
