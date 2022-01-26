@@ -1,51 +1,3 @@
-// 橋宏設定
-{
-  "workbench.colorTheme": "Default Dark+",
-  "editor.formatOnSave": true,
-  "vetur.format.defaultFormatterOptions": {
-      "js-beautify-html": {
-          "wrap_attributes": "auto"
-      },
-      "prettyhtml": {
-          "printWidth": 100,
-          "singleQuote": false,
-          "wrapAttributes": false,
-          "sortAttributes": false
-      }
-  },
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "liveServer.settings.port": 2364,
-  "liveServer.setting.donotShowInfoMsg": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "beautify.config": "",
-},
-//=================================================================
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript,html,css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.tabSize": 2,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "prettier.printWidth": 80,
-  "prettier.trailingComma": "es5",
-  "prettier.tabWidth": 2,
-
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-
-  "editor.formatOnSave": true, // 存檔時自動 format
-  "vetur.validation.template": true, // 關閉 vetur 驗證
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "auto"
-    }
-  }
-},
-//==============================================================
-
 {
   // ============== 自動格式化開關 =========================
   "editor.formatOnSave": true,
@@ -55,12 +7,46 @@
   //   "source.fixAll": true
   // },
 
+  //================= vetur 設定 =============================
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    // - auto: 僅在超出行長度時才對屬性進行換行。
+    // - force: 對除第一個屬性外的其他每個屬性進行換行。
+    // - force-aligned: 對除第一個屬性外的其他每個屬性進行換行，並保持對齊。
+    // - force-expand-multiline: 對每個屬性進行換行。
+    // - aligned-multiple: 當超出折行長度時，將屬性進行垂直對齊。
+
+    "prettier": {
+      // vue template html 設定
+      "printWidth": 500,
+      "sortAttributes": false, // 屬性自動排按順序排列
+      "wrap_attributes": "auto",
+
+      // vue script js 排版設定
+      "semi": true, //使用分號結尾
+      "singleQuote": false, //使用單引號
+      "eslintIntegration": false, //開啟 eslint 支援
+      "arrowParens": "always", //箭頭函式的引數，always： 使用圓括號，avoid： 不使用圓括號
+      "spaceBeforeFunctionParen": true
+    },
+
+    "prettyhtml": {
+      "printWidth": 160,
+      "sortAttributes": true, // 屬性自動排按順序排列
+      "singleQuote": false,
+      "wrap_attributes": "auto",
+      "proseWrap": "never" // 是否換行,
+    }
+  },
+
   // ============== prettier 設定 =============================
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.singleQuote": true,
   "prettier.semi": true,
-  "prettier.printWidth": 100,
+  "prettier.printWidth": 500,
   "prettier.tabWidth": 2,
+  "prettier.arrowParens": "always", //是否要有小括號
 
   "beautify.language": {
     "js": {
@@ -70,39 +56,14 @@
     "css": ["css", "scss"],
     "html": ["htm", "html"]
   },
-
-  //================= vetur 設定 =============================
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      // - auto: 僅在超出行長度時才對屬性進行換行。
-      // - force: 對除第一個屬性外的其他每個屬性進行換行。
-      // - force-aligned: 對除第一個屬性外的其他每個屬性進行換行，並保持對齊。
-      // - force-expand-multiline: 對每個屬性進行換行。
-      // - aligned-multiple: 當超出折行長度時，將屬性進行垂直對齊。
-      "wrap_attributes": true
-    },
-    "prettyhtml": {
-      "printWidth": 120,
-      "singleQuote": false,
-      "wrapAttributes": false,
-      "sortAttributes": false
-    },
-    "prettier": {
-      "semi": true, //使用分號結尾
-      "singleQuote": true, //使用單引號
-      "eslintIntegration": false //開啟 eslint 支援
-    }
-  },
   // ===========================================================
-
   "editor.tabSize": 2,
   "editor.wordWrap": "on", // vscode 文字超過視窗斷行
   "editor.letterSpacing": 1,
   "editor.fontFamily": "'Fira Code', 'Source Code Pro','Microsoft JhengHei'",
   "editor.fontSize": 16,
   "sync.forceUpload": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // js function 自動空格
 
   // ===================== git 同步 ==========================
   "sync.gist": "92a9c995ecf28d5a3d21c6f2a8307eca",
@@ -124,34 +85,7 @@
   "workbench.iconTheme": "material-icon-theme",
 
   // vscode 新增單字
-  "cSpell.userWords": [
-    "Jamse",
-    "Lebron",
-    "MVVM",
-    "Miaoli",
-    "Nuxt",
-    "OWASP",
-    "Repos",
-    "Tseng",
-    "USERAPI",
-    "axios",
-    "childs",
-    "concat",
-    "draggable",
-    "draggables",
-    "keydown",
-    "keyup",
-    "orgs",
-    "semibold",
-    "swal",
-    "swiper",
-    "tailwindcss",
-    "tbody",
-    "thead",
-    "typeof",
-    "typicode",
-    "vuetify"
-  ],
+  "cSpell.userWords": ["Jamse", "Lebron", "MVVM", "Miaoli", "Nuxt", "OWASP", "Repos", "Tseng", "USERAPI", "axios", "childs", "concat", "draggable", "draggables", "keydown", "keyup", "orgs", "semibold", "swal", "swiper", "tailwindcss", "tbody", "thead", "typeof", "typicode", "vuetify"],
   "window.title": "${folderName}${separator}",
   "bracketPairColorizer.depreciation-notice": false,
   "[vue]": {
@@ -160,81 +94,25 @@
 }
 
 
+// 橋宏設定==========================================================================
 {
-  "files.autoSave": "off",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "breadcrumbs.enabled": false,
-  "editor.minimap.enabled": true,
-  "todo-tree.highlights.enabled": false,
-  "explorer.confirmDragAndDrop": false,
-  "liveServer.settings.donotVerifyTags": true,
-  "explorer.confirmDelete": false,
-  "git.suggestSmartCommit": false,
-  "workbench.statusBar.visible": true,
-  "workbench.tree.renderIndentGuides": "always",
-  "editor.wordWrap": "on",
-  "workbench.tree.indent": 2,
-  "editor.letterSpacing": 1,
-  "editor.fontFamily": "'Fira Code', 'Source Code Pro','Microsoft JhengHei'",
-  "editor.fontSize": 16,
-  "editor.formatOnPaste": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.snippetSuggestions": "top",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.iconTheme": "vscode-icons",
-  "terminal.integrated.fontFamily": "monospace",
-  "workbench.sideBar.location": "left",
-  "sync.forceUpload": true,
-  "sync.gist": "92a9c995ecf28d5a3d21c6f2a8307eca",
-
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.tabSize": 2,
+  "workbench.colorTheme": "Default Dark+",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "prettier.printWidth": 80,
-  "prettier.trailingComma": "es5",
-  "prettier.tabWidth": 2,
-  "window.titleBarStyle": "custom",
-  "cSpell.userWords": [
-    "Jamse",
-    "Lebron",
-    "MVVM",
-    "Miaoli",
-    "OWASP",
-    "Repos",
-    "Tseng",
-    "axios",
-    "draggable",
-    "draggables",
-    "swiper",
-    "tailwindcss",
-    "typeof",
-    "typicode"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
+  "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+          "wrap_attributes": "auto"
+      },
+      "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+      }
   },
-  "eslint.validate": ["javascript", "vue"], // eslint 支援 vue
-  "vetur.validation.template": false, // 關閉 vetur 驗證
-
-  "eslint.options": {
-    "rules": {
-      "indent": ["error", 2],
-      "linebreak-style": ["nerver", "unix"],
-      "semi": ["error", "never"],
-      "quotes": ["error", "single"],
-      "no-console": ["warn"]
-    }
-  },
-  "workbench.editor.enablePreview": false,
-  "cSpell.enableFiletypes": ["javascript", "css", "vue"]
-}
-
-
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "liveServer.settings.port": 2364,
+  "liveServer.setting.donotShowInfoMsg": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "beautify.config": "",
+},
 
